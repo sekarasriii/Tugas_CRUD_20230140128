@@ -63,5 +63,15 @@ public class KtpController {
         }
     }
 
-
+    // DELETE /ktp/{id}: Hapus data KTP berdasarkan ID
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ApiResponse<Void>> deleteKtp(@PathVariable Integer id) {
+        try {
+            ktpService.deleteKtp(id);
+            return ResponseEntity.ok(new ApiResponse<>(200, "Data KTP berhasil dihapus", null));
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(new ApiResponse<>(404, e.getMessage(), null));
+        }
+    }
 }
