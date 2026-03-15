@@ -32,5 +32,24 @@ public class KtpController {
         }
     }
 
+    // GET /ktp: Ambil seluruh data KTP
+    @GetMapping
+    public ResponseEntity<ApiResponse<List<KtpDto>>> getAllKtp() {
+        List<KtpDto> ktpList = ktpService.getAllKtp();
+        return ResponseEntity.ok(new ApiResponse<>(200, "Berhasil mengambil semua data KTP", ktpList));
+    }
+
+    // GET /ktp/{id}: Ambil data KTP berdasarkan ID
+    @GetMapping("/{id}")
+    public ResponseEntity<ApiResponse<KtpDto>> getKtpById(@PathVariable Integer id) {
+        try {
+            KtpDto ktp = ktpService.getKtpById(id);
+            return ResponseEntity.ok(new ApiResponse<>(200, "Data KTP ditemukan", ktp));
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(new ApiResponse<>(404, e.getMessage(), null));
+        }
+    }
+
 
 }
