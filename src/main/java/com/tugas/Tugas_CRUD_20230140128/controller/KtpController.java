@@ -51,5 +51,17 @@ public class KtpController {
         }
     }
 
+    // PUT /ktp/{id}: Perbarui data KTP berdasarkan ID
+    @PutMapping("/{id}")
+    public ResponseEntity<ApiResponse<KtpDto>> updateKtp(@PathVariable Integer id, @RequestBody KtpDto ktpDto) {
+        try {
+            KtpDto updatedKtp = ktpService.updateKtp(id, ktpDto);
+            return ResponseEntity.ok(new ApiResponse<>(200, "Data KTP berhasil diperbarui", updatedKtp));
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(new ApiResponse<>(400, e.getMessage(), null));
+        }
+    }
+
 
 }
