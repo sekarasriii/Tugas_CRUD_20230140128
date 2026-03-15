@@ -1,7 +1,7 @@
 package com.tugas.Tugas_CRUD_20230140128.mapper;
 
-import com.tugas.Tugas_CRUD_20230140128.dto.KtpDto;
-import com.tugas.Tugas_CRUD_20230140128.entity.Ktp;
+import com.tugas.Tugas_CRUD_20230140128.model.dto.KtpDto;
+import com.tugas.Tugas_CRUD_20230140128.model.entity.Ktp;
 import org.mapstruct.Mapper;
 import java.util.List;
 

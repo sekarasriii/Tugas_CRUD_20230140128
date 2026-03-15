@@ -1,4 +1,4 @@
-package com.tugas.Tugas_CRUD_20230140128.entity;
+package com.tugas.Tugas_CRUD_20230140128.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

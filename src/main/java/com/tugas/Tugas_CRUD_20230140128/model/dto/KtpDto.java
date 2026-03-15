@@ -1,4 +1,4 @@
-package com.tugas.Tugas_CRUD_20230140128.dto;
+package com.tugas.Tugas_CRUD_20230140128.model.dto;
 
 import lombok.Data;
 import java.time.LocalDate;

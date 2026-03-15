@@ -1,6 +1,6 @@
 package com.tugas.Tugas_CRUD_20230140128.repository;
 
-import com.tugas.Tugas_CRUD_20230140128.entity.Ktp;
+import com.tugas.Tugas_CRUD_20230140128.model.entity.Ktp;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

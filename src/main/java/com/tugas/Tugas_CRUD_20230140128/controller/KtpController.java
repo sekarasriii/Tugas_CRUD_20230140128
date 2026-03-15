@@ -1,6 +1,6 @@
 package com.tugas.Tugas_CRUD_20230140128.controller;
 
-import com.tugas.Tugas_CRUD_20230140128.dto.KtpDto;
+import com.tugas.Tugas_CRUD_20230140128.model.dto.KtpDto;
 import com.tugas.Tugas_CRUD_20230140128.service.KtpService;
 import com.tugas.Tugas_CRUD_20230140128.util.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.tugas.Tugas_CRUD_20230140128.service;
 
-import com.tugas.Tugas_CRUD_20230140128.dto.KtpDto;
+import com.tugas.Tugas_CRUD_20230140128.model.dto.KtpDto;
 import java.util.List;
 
 public interface KtpService {
